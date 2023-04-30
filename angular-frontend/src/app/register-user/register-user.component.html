@@ -1,0 +1,43 @@
+<div>
+  <h1>EduGuru</h1>
+
+  <form (ngSubmit)="userRegister()">
+    <h2>Registration Form</h2>
+    <br /><br />
+    <label for="emailId">Email:</label>
+    <input type="email" id="emailId" name="emailId" /><br /><br />
+
+    <label for="userId">User ID:</label>
+    <input
+      type="text"
+      id="userId"
+      name="userId"
+      [(ngModel)]="user.userId"
+    /><br /><br />
+
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      [(ngModel)]="user.password"
+    /><br /><br />
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input
+      type="password"
+      id="confirmPassword"
+      name="confirmPassword"
+      [(ngModel)]="confirmp"
+    /><br /><br />
+
+    <button type="submit" class="btn btn-primary">Register</button>
+    <br />
+    <br />
+
+    <div class="signin-here">
+      <span>Already have an account? </span>
+      <a routerLink="/login" class="btn btn-secondary">Sign in here</a>
+    </div>
+  </form>
+</div>
